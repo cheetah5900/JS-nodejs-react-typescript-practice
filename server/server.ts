@@ -1,11 +1,19 @@
 import express from 'express';
-import items from './data/items.js';
+import cors from 'cors';
+import items from './data/items';
 
 const app = express();
 const port = 3000;
 
 // Middleware to parse JSON
 app.use(express.json());
+
+// Enable CORS middleware
+app.use(cors({
+ origin: 'http://localhost:5173', // Allow requests from this origin
+ methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify allowed HTTP methods
+ allowedHeaders: ['Content-Type', 'Authorization'], // Specify allowed headers
+}));
 
 // Routes
 
@@ -22,7 +30,7 @@ app.get('/api/items', (req, res) => {
 // Get a single item by ID
 app.get('/api/items/:id', (req, res) => {
  const itemId = req.params.id;
- const item = items.find(item => item.id === parseInt(itemId));
+ const item = items.find(item => item.id === itemId);
  if (item) {
   res.json(item);
  } else {
@@ -40,7 +48,7 @@ app.post('/api/items', (req, res) => {
 // update an existing item
 app.put('/api/items/:id', (req, res) => {
  const itemId = req.params.id;
- const index = items.findIndex(item => item.id === parseInt(itemId));
+ const index = items.findIndex(item => item.id === itemId);
  if (index !== -1) {
   const updatedItem = { ...items[index], ...req.body };
   items[index] = updatedItem;
@@ -51,10 +59,9 @@ app.put('/api/items/:id', (req, res) => {
 });
 
 // delete an item
-
 app.delete('/api/items/:id', (req, res) => {
  const itemId = req.params.id;
- const index = items.findIndex(item => item.id === parseInt(itemId));
+ const index = items.findIndex(item => item.id === itemId);
  if (index !== -1) {
   items.splice(index, 1);
   res.status(204).send('Successfully deleted');
