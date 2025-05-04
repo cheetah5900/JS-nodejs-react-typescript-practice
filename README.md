@@ -1,6 +1,6 @@
-# Task Manager API & Frontend (Node.js + Express + React + TypeScript)
+# Simple Product Manager API & Frontend (Node.js + Express + React + TypeScript)
 
-This is a simple Task Manager project built with **Node.js (Express)** for the backend RESTful API and **React (with TypeScript)** for the frontend UI, using **Vite** for fast development. It allows users to view, add, update, and delete tasks.
+This is a simple Product Manager project built with **Node.js (Express)** for the backend RESTful API and **React (with TypeScript)** for the frontend UI, using **Vite** for fast development. It allows users to view, add, update, and delete tasks.
 
 ## 🛠️ Tech Stack
 
@@ -15,10 +15,10 @@ This is a simple Task Manager project built with **Node.js (Express)** for the b
 
 ## 📚 Features
 
-✅ View all tasks  
-✅ Add a new task  
-✅ Update an existing task  
-✅ Delete a task
+✅ View all products  
+✅ Add a new product  
+✅ Update an existing product
+✅ Delete a product
 
 ## 🚀 How It Works
 
