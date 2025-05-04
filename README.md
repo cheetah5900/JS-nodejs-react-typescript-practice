@@ -1,6 +1,7 @@
-# Simple Product Manager API & Frontend (Node.js + Express + React + TypeScript)
+# Simple Product Manager API & Frontend (Node.js + Express + React + TypeScript + Github Copilot)
 
 This is a simple Product Manager project built with **Node.js (Express)** for the backend RESTful API and **React (with TypeScript)** for the frontend UI, using **Vite** for fast development. It allows users to view, add, update, and delete tasks.
+Additionally, this project utilizes **GitHub Copilot** to assist in writing code and generating suggestions, speeding up the development process.
 
 ## 🛠️ Tech Stack
 
